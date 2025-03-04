@@ -1,4 +1,8 @@
-# DB=>php_chat_app
+# php chat app
+![Screenshot from 2025-03-04 21-10-45](https://github.com/user-attachments/assets/048ad6ed-e876-4063-ae32-2ccca11d73ef)
+
+
+## DB
 ```sql
 CREATE DATABASE php_chat_app DEFAULT CHARACTER SET utf8mb4;
 ```
