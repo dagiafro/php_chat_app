@@ -1,0 +1,213 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+}
+
+#auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#auth-container p {
+    padding-top: 10px;
+}
+
+/* Chat Container */
+#chat-container {
+    width: 100%;
+    max-width: 1200px; /* Restrict max width */
+    height: 100vh;
+    display: flex;
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 0 auto; /* Center horizontally */
+}
+
+
+#chat-title {
+    padding: 10px;
+}
+
+/* Left Panel (Tabs + Lists) */
+/* #left-panel {
+    width: 30%;
+    background-color: #222;
+    padding: 10px;
+    border-right: 2px solid #333;
+} */
+#left-panel {
+    width: 30%;
+    background-color: #222;
+    padding: 10px;
+    border-right: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures it fills the container */
+}
+
+
+#tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    width: 50%;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tab.active {
+    font-weight: bold;
+    background-color: #444;
+    border-bottom: 2px solid #fff;
+}
+
+a:active,a {
+    color: #fff;
+}
+
+#group-list, #user-list {
+    height: 85vh;
+    overflow-y: scroll;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+
+
+#group-list div, #user-list div {
+    padding: 8px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+#group-list div:hover, #user-list div:hover {
+    background-color: #444;
+}
+
+#group-list p,#user-list p {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#group-list::-webkit-scrollbar, #user-list::-webkit-scrollbar {
+    width: 5px; /* Thin scrollbar */
+}
+
+#group-list::-webkit-scrollbar-track, #user-list::-webkit-scrollbar-track {
+    background: #222; /* Background color */
+    border-radius: 10px;
+}
+
+#group-list::-webkit-scrollbar-thumb, #user-list::-webkit-scrollbar-thumb {
+    background: #666; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+#group-list::-webkit-scrollbar-thumb:hover, #user-list::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Darker when hovered */
+}
+
+
+/* Right Panel (Messages) */
+#right-panel {
+    width: 70%;
+    padding: 15px;
+}
+
+.right-panel-header {
+    display: flex;
+}
+.right-panel-header .chat-info {
+    width: 85%;
+}
+.right-panel-header #chat-type {
+    padding: 10px;
+    margin-top: 5px;
+}
+.right-panel-header #logout-btn {
+    width: fit-content;
+    min-width: 21%;
+    margin: 5px;
+}
+
+#messages {
+    height: 87%;
+    overflow-y: auto;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.msg-inputs {
+    display: flex;
+    align-items: baseline;
+}
+.msg-inputs button {
+    width: 15%;
+}
+
+.group-inputs button {
+    width: 10%;
+}
+
+.group-inputs {
+    display: flex;
+    align-items: baseline;
+}
+
+.chat-item {
+    cursor: pointer;
+}
+.chat-item.active {
+    background: #000000;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 7px 0px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #ccc;
+}

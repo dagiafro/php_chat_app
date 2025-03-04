@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Chat App</title>
+    <link rel="stylesheet" href="./public/app.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="auth-container">
+        <div id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-name" placeholder="Name">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="register()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="toggleAuth('login')">Login</a></p>
+        </div>
+
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleAuth('signup')">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <div id="left-panel">
+            <div id="tabs">
+                <button class="tab active" onclick="showTab('groups')">Groups</button>
+                <button class="tab" onclick="showTab('users')">Users</button>
+            </div>
+            <div id="groups">
+                <div class="group-inputs">
+                    <input type="text" id="group-name" autocomplete="off" required placeholder="New Group Name">
+                    <button onclick="createGroup()">+</button>
+                </div>
+                <div id="group-list"></div>
+            </div>
+            <div id="users" style="display: none;">
+                <div id="user-list"></div>
+            </div>
+        </div>
+        <div id="right-panel">
+            <div class="right-panel-header">
+                <div class="chat-info">
+                    <h3 id="chat-title">Select a group or user</h3>
+                    <span id="chat-type" style="display: none;"></span>
+                </div>
+                <button id="logout-btn" onclick="logout()"><- Logout (Dagim)</button>
+            </div>
+            <div id="messages"></div>
+            <div class="msg-inputs">
+                <input type="text" id="message" autocomplete="off" placeholder="Type a message">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="./public/service.js"></script>
+    <script src="./public/app.js"></script>
+</body>
+</html>
